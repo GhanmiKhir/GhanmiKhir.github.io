@@ -1,0 +1,109 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+}
+body {
+  height: 2000px;
+}
+/* WELCOME */
+
+.welcome {
+  background: url(./images/Landing_image_min.jpg) no-repeat;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+}
+#particles-js {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+.title-content {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+.name,
+.desc {
+  color: white;
+  font-weight: 300;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.name {
+  letter-spacing: 10px;
+  font-size: 6vw;
+  margin-bottom: 3%;
+}
+.desc {
+  font-size: 2vw;
+  font-weight: 300;
+}
+.down-arrow {
+  color: white;
+  position: absolute;
+  bottom: 40px;
+  left: 48%;
+  left: calc(50% - 20px);
+  font-size: 40px;
+  cursor: pointer;
+}
+
+/* NAV */
+
+#navigation {
+  position: fixed;
+  width: 100%;
+  font-size: 20px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border-bottom: solid 1px rgba(255, 255, 255, 0.2);
+}
+.logo {
+  color: white;
+  float: left;
+  padding: 20px;
+  cursor: default;
+}
+.site-nav {
+  float: right;
+  color: white;
+  padding: 20px;
+  padding-right: 30px;
+  font-weight: 300;
+}
+
+.site-nav ul {
+  display: flex;
+  list-style: none;
+}
+
+.site-nav li {
+  text-decoration: none;
+  margin-left: 30px;
+}
+
+.site-nav a {
+  color: white;
+  text-decoration: none;
+}
+.site-nav a:hover {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+@media screen and (min-width: 1200px) {
+  .name {
+    font-size: 4vw;
+  }
+  .desc {
+    font-size: 1.5vw;
+  }
+}

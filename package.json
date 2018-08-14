@@ -1,0 +1,27 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "My personal portfolio page",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GhanmiKhir/GhanmiKhir.github.io.git"
+  },
+  "keywords": [
+    "portfolio",
+    "ghanmi",
+    "khir"
+  ],
+  "author": "Ghanmi Khir",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GhanmiKhir/GhanmiKhir.github.io/issues"
+  },
+  "homepage": "https://github.com/GhanmiKhir/GhanmiKhir.github.io#readme",
+  "dependencies": {
+    "particles.js": "^2.0.0"
+  }
+}
