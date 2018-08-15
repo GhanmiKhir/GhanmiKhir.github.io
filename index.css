@@ -77,7 +77,6 @@ body {
   float: right;
   color: white;
   padding: 20px;
-  padding-right: 30px;
   font-weight: 300;
 }
 
@@ -96,7 +95,7 @@ body {
   text-decoration: none;
 }
 .site-nav a:hover {
-  color: rgba(255, 255, 255, 0.5);
+  color: #45bea0; /*#14a77b*/
 }
 
 @media screen and (min-width: 1200px) {
