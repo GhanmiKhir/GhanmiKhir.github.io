@@ -123,13 +123,13 @@ body {
 }
 .about {
   opacity: 1;
-  padding: 7% 20%;
+  padding: 6% 20%;
   color: var(--dark-color);
   text-align: center;
 }
 .about h1 {
   font-weight: 400;
-  font-size: 4rem;
+  font-size: 3.5rem;
 }
 .about hr {
   border: 0;
@@ -149,8 +149,13 @@ body {
   width: 150px;
 }
 .about p {
-  line-height: 1.5;
-  font-size: 1.1rem;
+  width: 55%;
+  margin: auto;
+  line-height: 30px;
+  font-size: 18px;
   text-align: justify;
   font-weight: 400;
+}
+.about strong {
+  font-weight: 600;
 }
