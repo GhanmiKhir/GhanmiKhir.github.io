@@ -10,7 +10,7 @@ body {
 /* WELCOME */
 
 .welcome {
-  background: url(./images/Landing_image_min.jpg) no-repeat;
+  background: url(./Images/Landing_image_min.jpg) no-repeat;
   height: 100vh;
   background-size: cover;
   background-position: center;
