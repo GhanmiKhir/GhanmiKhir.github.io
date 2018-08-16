@@ -329,7 +329,7 @@ body {
 .skills hr {
   border: 0;
   margin: auto;
-  margin-bottom: 10px;
+  margin-bottom: 50px;
   height: 2px;
   width: 40%;
   background-image: -webkit-linear-gradient(
@@ -339,7 +339,17 @@ body {
     var(--light-color)
   );
 }
+.skills h3 {
+  text-align: left;
+  margin-bottom: 20px;
+}
+.skills .progress {
+  margin-top: 3px;
+}
 .skills .progress-bar {
   background-color: var(--orange) !important;
-  /* padding: 5px !important; */
+}
+table {
+  text-align: left;
+  border-bottom: solid 1px #e4e7ea;
 }
