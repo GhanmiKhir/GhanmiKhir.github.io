@@ -265,17 +265,15 @@ body {
 
 /* ABOUT ME */
 
-#about {
-  height: 100vh;
-  background: url("./images/memphis-colorful-min.png");
-  background-repeat: repeat;
-  background-attachment: fixed;
-}
 .about {
   opacity: 1;
   padding: 6% 0px;
   color: var(--dark-color);
   text-align: center;
+  height: 100vh;
+  background: url("./images/memphis-colorful-min.png");
+  background-repeat: repeat;
+  background-attachment: fixed;
 }
 .about h1 {
   font-weight: 400;
