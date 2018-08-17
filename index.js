@@ -85,3 +85,28 @@ $(".show-more").click(function() {
     $(this).css("transform", "rotate(0deg)");
   }
 });
+//flip the arrow of the skills table
+$(".flippable").css({
+  display: "block",
+  fontSize: "20px",
+  transform: "rotateX(180deg)"
+});
+const rotatedPosition =
+  "matrix3d(1, 0, 0, 0, 0, -1, 1.22465e-16, 0, 0, -1.22465e-16, -1, 0, 0, 0, 0, 1)";
+$(".flippable").click(function() {
+  if ($(this).css("transform") == rotatedPosition) {
+    $(this).css("transform", "rotateX(0deg)");
+  } else {
+    $(this).css("transform", "rotateX(180deg)");
+  }
+});
+
+//carousel configs
+$(".carousel").slick({
+  dots: true,
+  infinite: true,
+  centerMode: true,
+  centerPadding: "60px",
+  slidesToShow: 3,
+  slidesToScroll: 1
+});

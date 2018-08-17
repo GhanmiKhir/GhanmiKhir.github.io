@@ -27,10 +27,6 @@ body {
   z-index: 100;
   position: fixed;
 }
-
-.loading {
-}
-
 .loading > div {
   width: 60px;
   height: 60px;
@@ -312,7 +308,7 @@ body {
 
 /* SKILLS */
 
-.skills {
+#Skills {
   background-color: var(--light-color);
   color: var(--dark-color);
   border-top: solid 1px var(--dark-color);
@@ -374,6 +370,12 @@ table {
   padding: 5px;
   border-top: solid 1px #dfdfdf;
 }
+.card-body a {
+  background-color: var(--orange);
+  border-color: var(--orange);
+  color: white;
+  outline: none;
+}
 .show-more {
   height: 20px;
   font-size: 20px;
@@ -386,4 +388,32 @@ table {
 }
 .show-more i:hover {
   cursor: pointer;
+}
+
+/* PROJECTS */
+
+#Projects {
+  background-color: var(--light-color);
+  color: var(--dark-color);
+  border-top: solid 1px var(--dark-color);
+  text-align: center;
+  padding: 6% 0px;
+}
+.projects h1 {
+  font-weight: 400;
+  font-size: 3.5rem;
+  margin-top: 20px;
+}
+.projects hr {
+  border: 0;
+  margin: auto;
+  margin-bottom: 50px;
+  height: 2px;
+  width: 40%;
+  background-image: -webkit-linear-gradient(
+    left,
+    var(--light-color),
+    var(--orange),
+    var(--light-color)
+  );
 }
