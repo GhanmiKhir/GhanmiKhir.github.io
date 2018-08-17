@@ -1,25 +1,10 @@
+//Smooth scrolling throuout the page
 $("a").smoothScroll({ speed: 600, easing: "swing" });
+
+//animating the arrow button in the first page
 $(function() {
   $(".down-arrow").addClass("animated pulse infinite");
 });
-// $(document).ready(function() {
-//   //compares the scroll to the last scroll
-//   var lastScrollTop = 0;
-//   $(window).scroll(function(event) {
-//     var st = $(this).scrollTop();
-//     if (st > lastScrollTop) {
-//       // downscroll code
-//       $("#navigation").removeClass("fadeInUp");
-//       $("#navigation").addClass("fadeOutUp");
-//     } else {
-//       // upscroll code
-//       $("#navigation").removeClass("fadeOutUp");
-//       $("#navigation").addClass("fadeInUp");
-//     }
-//     lastScrollTop = st;
-//   });
-//
-// });
 
 //remove the preloader overlay
 setTimeout(function() {
@@ -49,7 +34,7 @@ $(function() {
   });
 });
 
-// Animating the table
+// Animating the Skills table
 $(".thead-light").css("cursor", "pointer");
 
 $(".hide-languages").click(function() {
@@ -73,3 +58,31 @@ $(".hide-tools").click(function() {
     .slideToggle("slow");
   $(".tool").toggleClass("animated fadeOut");
 });
+
+//Animating the Achievments cards
+$(".card-body").slideUp();
+$(".show-more")
+  .children("i")
+  .addClass("animated pulse infinite");
+//for the skills arrow
+$("th")
+  .children("i")
+  .addClass("animated pulse infinite");
+
+$(".show-more")
+  .children("i")
+  .click(function() {
+    $(this)
+      .parent()
+      .siblings(".card-body")
+      .slideToggle("slow");
+  });
+$(".show-more").click(function() {
+  if ($(this).css("transform") == "matrix(1, 0, 0, 1, 0, 0)") {
+    $(this).css("transform", "rotate(180deg)");
+  } else {
+    $(this).css("transform", "rotate(0deg)");
+  }
+});
+
+//filp the arrow each time you click on it

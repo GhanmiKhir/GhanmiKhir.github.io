@@ -310,7 +310,7 @@ body {
   font-weight: 600;
 }
 
-/* SKILLS & ACHIEVEMENTS */
+/* SKILLS */
 
 .skills {
   background-color: var(--light-color);
@@ -350,4 +350,38 @@ body {
 table {
   text-align: left;
   border-bottom: solid 1px #e4e7ea;
+}
+.flippable {
+  transform: rotate(0deg);
+}
+
+/* ACHIEVEMENTS */
+
+.achievements {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.card {
+  width: 200px;
+  margin: 10px;
+  border-radius: 5px;
+  height: 0%;
+}
+.card-img-top {
+}
+.card-body {
+  padding: 5px;
+  border-top: solid 1px #dfdfdf;
+}
+.show-more {
+  height: 20px;
+  font-size: 20px;
+  border-top: solid 1px #dfdfdf;
+  background-color: var(--light-color);
+  transform: rotate(0deg);
+}
+.show-more i {
+  display: block;
 }
