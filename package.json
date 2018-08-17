@@ -23,6 +23,7 @@
   "homepage": "https://github.com/GhanmiKhir/GhanmiKhir.github.io#readme",
   "dependencies": {
     "jquery-smooth-scroll": "^2.2.0",
+    "lightbox2": "^2.10.0",
     "particles.js": "^2.0.0"
   }
 }

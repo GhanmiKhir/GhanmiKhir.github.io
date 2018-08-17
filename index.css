@@ -339,6 +339,7 @@ body {
 }
 .skills h3 {
   text-align: left;
+  margin-top: 50px;
   margin-bottom: 20px;
 }
 .skills .progress {
@@ -369,8 +370,6 @@ table {
   border-radius: 5px;
   height: 0%;
 }
-.card-img-top {
-}
 .card-body {
   padding: 5px;
   border-top: solid 1px #dfdfdf;
@@ -384,4 +383,7 @@ table {
 }
 .show-more i {
   display: block;
+}
+.show-more i:hover {
+  cursor: pointer;
 }

@@ -77,6 +77,7 @@ $(".show-more")
       .siblings(".card-body")
       .slideToggle("slow");
   });
+//filp the arrow each time you click on it
 $(".show-more").click(function() {
   if ($(this).css("transform") == "matrix(1, 0, 0, 1, 0, 0)") {
     $(this).css("transform", "rotate(180deg)");
@@ -84,5 +85,3 @@ $(".show-more").click(function() {
     $(this).css("transform", "rotate(0deg)");
   }
 });
-
-//filp the arrow each time you click on it
