@@ -250,15 +250,6 @@ body {
   color: #45bea0; /*#14a77b*/
 }
 
-@media screen and (min-width: 1200px) {
-  .name {
-    font-size: 4vw;
-  }
-  .desc {
-    font-size: 1.5vw;
-  }
-}
-
 /* ABOUT ME */
 
 .about {
@@ -416,4 +407,46 @@ table {
     var(--orange),
     var(--light-color)
   );
+}
+
+/* CAROUSEL */
+
+.carousel {
+  width: 100%;
+}
+.elem {
+  margin: 0 auto;
+  width: 80%;
+  display: flex !important;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+}
+.elem img {
+}
+.project-desc {
+  width: 350px;
+  height: 344px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 10px;
+}
+.project-desc h3 {
+  text-align: center;
+}
+.project-desc p {
+}
+.slick-next {
+  right: 20px;
+  transform: scale(1.5);
+}
+
+/* RESPONSIVE */
+
+@media screen and (min-width: 1200px) {
+  .name {
+    font-size: 4vw;
+  }
+  .desc {
+    font-size: 1.5vw;
+  }
 }

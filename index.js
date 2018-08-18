@@ -103,10 +103,18 @@ $(".flippable").click(function() {
 
 //carousel configs
 $(".carousel").slick({
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  arrows: false,
+  fade: true,
+  asNavFor: ".slider-nav"
+});
+$(".slider-nav").slick({
+  slidesToShow: 5,
+  slidesToScroll: 1,
+  asNavFor: ".carousel",
+  arrows: true,
   dots: true,
-  infinite: true,
   centerMode: true,
-  centerPadding: "60px",
-  slidesToShow: 3,
-  slidesToScroll: 1
+  focusOnSelect: true
 });
