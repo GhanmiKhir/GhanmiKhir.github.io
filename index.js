@@ -118,3 +118,41 @@ $(".slider-nav").slick({
   centerMode: true,
   focusOnSelect: true
 });
+
+//ease redirect buttons on hover
+
+$(".redirect").hover(function() {
+  $(this)
+    .stop()
+    .animate(
+      {
+        backgroundColor: "#f4f4f4",
+        color: "#2f80ed"
+      },
+      "fast"
+    );
+});
+$(".redirect").hover(
+  function() {
+    $(this)
+      .stop()
+      .animate(
+        {
+          backgroundColor: "#f4f4f4",
+          color: "#2f80ed"
+        },
+        "swing"
+      );
+  },
+  function() {
+    $(this)
+      .stop()
+      .animate(
+        {
+          backgroundColor: "#2f80ed",
+          color: "#f4f4f4"
+        },
+        "swing"
+      );
+  }
+);
