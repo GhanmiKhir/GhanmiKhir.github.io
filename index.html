@@ -387,7 +387,7 @@
             <div class="chips">
               <div class="chip">HTML5</div>
               <div class="chip">CSS3</div>
-          </div>
+            </div>
           <div class="sources">
             <a class="redirect" href="https://github.com/GhanmiKhir/documentation_page" target="_blank">GITHUB &nbsp;<i class="fab fa-github"></i></a>
             <a class="redirect" href="https://ghanmikhir.github.io/documentation_page" target="_blank">VIEW LIVE &nbsp;<i class="fas fa-external-link-alt"></i></a>
@@ -536,11 +536,39 @@
     <div class="contact">
       <h1>Contact me</h1>
       <hr/>
-      <p>Want to get in touch? Just fill the form below or use one of my social links.</p>
-      <form class="" action="https://formspree.io/ghanmikhair@live.fr" method="post">
-
+      <h5>Want to get in touch? Just fill the form below or use one of my social links.</h5>
+      <form class="form-group" action="https://formspree.io/ghanmikhair@live.fr" method="post">
+          <div class="row">
+            <div class="form-elem">
+            <label for="name"><i class="fas fa-user"></i> &nbsp;name</label>
+            <input class ="form-control form-control-lg" type="text" id="name" name="name" placeholder="Enter your name" required>
+          </div>
+          <div class="form-elem">
+            <label for="email"><i class="fas fa-envelope"></i> &nbsp;Email</label>
+            <input class ="form-control form-control-lg" type="email" id="email" name="email" placeholder="Enter your email" required>
+          </div>
+          </div>
+          <div class="message">
+          <label for="message"><i class="fas fa-comment"></i> &nbsp;Message</label>
+          <textarea name="message" id="message" class ="form-control form-control-lg" placeholder="Enter a message" required></textarea>
+        </div>
+        <button class="submit-form" type="submit" name="send" value="Send">
+          Send &nbsp;&nbsp;&nbsp;<i class="fa fa-paper-plane"></i>
+        </button>
       </form>
+    <section class="media">
+      <a href="mailto:ghanmikhair@live.fr"><i class="fas fa-envelope"></i></a>
+      <a href="https://www.facebook.com/dovahkhir" target="_blank"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://twitter.com/GhanmiKhir" target="_blank"><i class="fab fa-twitter"></i></a>
+      <a href="https://www.linkedin.com/in/ghanmi-khir-2687a1140/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+      <a href="https://github.com/ghanmikhir" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://www.freecodecamp.org/ghanmik" id="profile-link" target="_blank"><i class="fab fa-free-code-camp" ></i></a>
+      <a href="https://codepen.io/ghanmi-khir/" target="_blank"><i class="fab fa-codepen"></i></a>
+    </section>
     </div>
+    <footer class="site-footer">
+      <span class="copyright">	&copy;2018 Copyright Ghanmi Khir</span>
+    </footer>
   </section>
 
 

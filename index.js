@@ -119,7 +119,7 @@ $(".slider-nav").slick({
   focusOnSelect: true
 });
 
-//ease redirect buttons on hover
+//ease buttons on hover
 
 $(".redirect").hover(function() {
   $(this)
@@ -156,3 +156,43 @@ $(".redirect").hover(
       );
   }
 );
+$(".submit-form").hover(
+  function() {
+    $(this)
+      .stop()
+      .animate(
+        {
+          backgroundColor: "#708c90",
+          color: "#f4f4f4"
+        },
+        "swing"
+      );
+  },
+  function() {
+    $(this)
+      .stop()
+      .animate(
+        {
+          backgroundColor: "#f4f4f4",
+          color: "#708c90"
+        },
+        "swing"
+      );
+  }
+);
+$(".media")
+  .children()
+  .hover(
+    function() {
+      $(this).css({
+        backgroundColor: "#f4f4f4",
+        color: "#708c90"
+      });
+    },
+    function() {
+      $(this).css({
+        backgroundColor: "#708c90",
+        color: "#f4f4f4"
+      });
+    }
+  );
