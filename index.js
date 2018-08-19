@@ -1,6 +1,24 @@
 //Smooth scrolling throuout the page
 $("a").smoothScroll({ speed: 600, easing: "swing" });
-
+// load different particle config on smaller screen sizes
+window.onload = function() {
+  if (screen.width < 960) {
+    particlesJS.load("particles-js", "./configs/particles2.json");
+  } else {
+    particlesJS.load("particles-js", "./configs/particles.json");
+  }
+};
+window.addEventListener(
+  "resize",
+  function() {
+    if (screen.width < 960) {
+      particlesJS.load("particles-js", "./configs/particles2.json");
+    } else {
+      particlesJS.load("particles-js", "./configs/particles.json");
+    }
+  },
+  true
+);
 //animating the arrow button in the first page
 $(function() {
   $(".down-arrow").addClass("animated pulse infinite");
@@ -107,7 +125,15 @@ $(".carousel").slick({
   slidesToScroll: 1,
   arrows: false,
   fade: true,
-  asNavFor: ".slider-nav"
+  asNavFor: ".slider-nav",
+  responsive: [
+    {
+      breakpoint: 770,
+      settings: {
+        arrows: true
+      }
+    }
+  ]
 });
 $(".slider-nav").slick({
   slidesToShow: 5,
@@ -116,7 +142,19 @@ $(".slider-nav").slick({
   arrows: true,
   dots: true,
   centerMode: true,
-  focusOnSelect: true
+  focusOnSelect: true,
+  responsive: [
+    {
+      breakpoint: 770,
+      settings: {
+        slidesToShow: 3
+      }
+    },
+    {
+      breakpoint: 630,
+      settings: {}
+    }
+  ]
 });
 
 //ease buttons on hover

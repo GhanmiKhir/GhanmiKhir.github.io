@@ -188,7 +188,7 @@ body {
 }
 .name {
   letter-spacing: 10px;
-  font-size: 6vw;
+  font-size: 5vw;
   margin-bottom: 3%;
 }
 .desc {
@@ -310,6 +310,9 @@ body {
   font-size: 3.5rem;
   margin-top: 20px;
 }
+.knowledge {
+  width: 60%;
+}
 .skills hr {
   border: 0;
   margin: auto;
@@ -388,7 +391,6 @@ table {
   border-top: solid 1px var(--dark-color);
   text-align: center;
   padding: 6% 0px;
-  min-height: 100vh;
 }
 .projects h1 {
   font-weight: 400;
@@ -419,7 +421,7 @@ table {
   display: flex !important;
   flex-direction: row;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   outline: none;
 }
 .elem img {
@@ -569,10 +571,10 @@ form label {
   font-weight: 300;
 }
 .media {
-  padding: 0px 60px;
+  padding: 0px 30px;
   font-size: 50px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
 }
 .media a {
@@ -595,11 +597,168 @@ form label {
 }
 /* RESPONSIVE */
 
-@media screen and (min-width: 1200px) {
+/* ipad */
+@media screen and (max-width: 768px) {
   .name {
-    font-size: 4vw;
+    font-size: 6vw;
   }
   .desc {
-    font-size: 1.5vw;
+    font-size: 2.5vw;
+  }
+  .about p {
+    width: 80%;
+  }
+  .elem img {
+    width: 40%;
+  }
+  .contact h5 {
+    font-size: 1.2rem;
+    font-weight: 300;
+  }
+  .media {
+    padding: 0px 20px;
+    font-size: 40px;
+  }
+  .media a {
+    margin: 15px;
+    text-decoration: none;
+    color: var(--light-color);
+    border-radius: 5px;
+    width: 65px;
+  }
+}
+@media screen and (max-width: 630px) {
+  .logo {
+    display: none;
+  }
+  .site-nav {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .site-nav ul {
+    margin-bottom: 0px;
+    align-items: center;
+    justify-content: center;
+  }
+  .about img {
+    width: 100px;
+  }
+  .about p {
+    width: 90%;
+  }
+  .elem {
+    margin: 20px auto;
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    outline: none;
+  }
+  .elem img {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    order: 1;
+    width: 100%;
+  }
+  .project-desc {
+    width: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    margin: auto;
+    order: 2;
+  }
+  .project-desc h3 {
+    margin-top: -10px;
+  }
+  .project-desc p {
+    padding: 20px;
+    margin: -15px 0;
+  }
+  .slider-nav {
+    display: none;
+  }
+  .slick-next {
+    right: 5px;
+  }
+  .slick-prev:before,
+  .slick-next:before {
+    color: var(--dark-color);
+  }
+  #Projects {
+    padding-bottom: 0px;
+  }
+}
+@media screen and (max-width: 480px) {
+  #navigation {
+    font-size: 16px;
+  }
+  .site-nav {
+    padding: 10px 0px;
+  }
+
+  .site-nav ul {
+    justify-content: space-around;
+  }
+
+  .site-nav li {
+    margin: 0px;
+  }
+  .name {
+    font-size: 7vw;
+  }
+  .desc {
+    font-size: 4vw;
+  }
+  .about h1,
+  .skills h1,
+  .projects h1,
+  .contacts h1 {
+    font-size: 2.5rem;
+  }
+  .about p {
+    font-size: 14px;
+  }
+  .knowledge {
+    width: 100%;
+  }
+  th {
+    font-size: 12px;
+  }
+  .card {
+    width: 300px;
+  }
+  .contact form {
+    width: 90%;
+    margin: 40px auto;
+  }
+  .row {
+    padding: 0 15px;
+    display: flex;
+    flex-direction: column;
+  }
+  .form-elem {
+    width: 100%;
+    text-align: left;
+  }
+  #name {
+    margin-bottom: 25px;
+  }
+  .message {
+    margin-top: 25px;
+  }
+  .media {
+    padding: 0px 5px;
+    font-size: 20px;
+    border-radius: 2px;
+  }
+  .media a {
+    margin: 7px;
+    text-decoration: none;
+    color: var(--light-color);
+    border-radius: 5px;
+    width: 30px;
   }
 }
