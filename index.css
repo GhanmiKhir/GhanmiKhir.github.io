@@ -336,6 +336,8 @@ body {
 }
 .skills .progress-bar {
   background-color: var(--orange) !important;
+  font-weight: 600;
+  font-size: 13px;
 }
 table {
   text-align: left;
