@@ -1,15 +1,10 @@
 :root {
-  --light-color: #f4f4f4;
+  --light-color: #fcfcfc;
   --dark-color: #666666;
-  --light-green: #45bea0;
+  --light-green: #5bc0be;
   --normal-green: #104148;
   --dark-green: #0d3036;
-  --grayish-green: #708c90;
-  --orange: #f7c586;
-}
-@font-face {
-  font-family: "Titillium";
-  src: url(./fonts/Titillium-Regular.otf);
+  --orange: #5bc0be;
 }
 * {
   padding: 0;
@@ -251,7 +246,7 @@ body {
   text-decoration: none;
 }
 .site-nav a:hover {
-  color: #45bea0; /*#14a77b*/
+  color: var(--light-green);
 }
 
 /* ABOUT ME */
@@ -261,7 +256,7 @@ body {
   padding: 6% 0px;
   color: var(--dark-color);
   text-align: center;
-  background: url("./images/memphis-colorful-min.png");
+  background: url("./images/memphis-colorful.jpg");
   background-repeat: repeat;
   background-attachment: fixed;
 }
@@ -389,12 +384,41 @@ table {
   cursor: pointer;
 }
 
+/* HIRE */
+
+.hire {
+  background-color: var(--light-green);
+  text-align: center;
+  padding: 75px;
+  line-height: 2.5;
+  color: var(--light-color);
+}
+.hire h2 {
+  font-size: 32px;
+  padding-bottom: 10px;
+}
+.hire h3 {
+  font-size: 18px;
+  padding-bottom: 20px;
+}
+.hire a {
+  text-decoration: none;
+  color: var(--light-green);
+  background-color: var(--light-color);
+  padding: 3px 40px;
+  border: 1px solid var(--light-color);
+  border-radius: 2px;
+}
+.hire a:hover {
+  color: var(--light-color);
+  background-color: var(--light-green);
+}
+
 /* PROJECTS */
 
 #Projects {
   background-color: var(--light-color);
   color: var(--dark-color);
-  border-top: solid 1px var(--dark-color);
   text-align: center;
   padding: 6% 0px;
 }
@@ -497,7 +521,7 @@ table {
 
 #Contact {
   text-align: center;
-  background-color: var(--grayish-green);
+  background-color: var(--light-green);
   color: var(--light-color);
   padding: 6% 0px 0px 0px;
 }
@@ -514,9 +538,9 @@ table {
   width: 40%;
   background-image: -webkit-linear-gradient(
     left,
-    var(--grayish-green),
+    var(--light-green),
     var(--light-color),
-    var(--grayish-green)
+    var(--light-green)
   );
 }
 .contact h5 {
@@ -524,7 +548,6 @@ table {
   font-weight: 300;
 }
 .contact form {
-  width: 80%;
   margin: 80px auto;
 }
 form label {
@@ -571,7 +594,7 @@ form label {
   background-color: var(--light-color);
   border: 1px solid var(--light-color);
   cursor: pointer;
-  color: var(--grayish-green);
+  color: var(--light-green);
   margin-top: 40px;
   font-size: 1.2em;
   font-weight: 300;
@@ -595,7 +618,7 @@ form label {
 
 .site-footer {
   margin-top: 40px;
-  background-color: var(--grayish-green);
+  background-color: var(--light-green);
   border-top: solid 1px var(--light-color);
   height: 60px;
   font-weight: 300;
