@@ -200,7 +200,7 @@ $(".submit-form").hover(
       .stop()
       .animate(
         {
-          backgroundColor: "#708c90",
+          backgroundColor: "#5bc0be",
           color: "#f4f4f4"
         },
         "swing"
@@ -212,7 +212,7 @@ $(".submit-form").hover(
       .animate(
         {
           backgroundColor: "#f4f4f4",
-          color: "#708c90"
+          color: "#5bc0be"
         },
         "swing"
       );
@@ -224,12 +224,12 @@ $(".media")
     function() {
       $(this).css({
         backgroundColor: "#f4f4f4",
-        color: "#708c90"
+        color: "#5bc0be"
       });
     },
     function() {
       $(this).css({
-        backgroundColor: "#708c90",
+        backgroundColor: "#5bc0be",
         color: "#f4f4f4"
       });
     }

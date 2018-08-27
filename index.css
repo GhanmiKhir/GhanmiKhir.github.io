@@ -389,17 +389,17 @@ table {
 .hire {
   background-color: var(--light-green);
   text-align: center;
-  padding: 75px;
+  padding: 50px 0px;
   line-height: 2.5;
   color: var(--light-color);
 }
 .hire h2 {
   font-size: 32px;
-  padding-bottom: 10px;
+  padding-bottom: 15px;
 }
 .hire h3 {
   font-size: 18px;
-  padding-bottom: 20px;
+  padding-bottom: 25px;
 }
 .hire a {
   text-decoration: none;
@@ -412,6 +412,7 @@ table {
 .hire a:hover {
   color: var(--light-color);
   background-color: var(--light-green);
+  font-weight: 600;
 }
 
 /* PROJECTS */
