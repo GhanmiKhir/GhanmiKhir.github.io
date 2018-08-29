@@ -24,6 +24,8 @@
   "dependencies": {
     "jquery-smooth-scroll": "^2.2.0",
     "lightbox2": "^2.10.0",
-    "particles.js": "^2.0.0"
+    "particles.js": "^2.0.0",
+    "slick": "^1.12.2",
+    "waypoints": "^4.0.1"
   }
 }

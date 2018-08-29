@@ -29,27 +29,88 @@ setTimeout(function() {
   $(document).ready(function() {
     $(".preloader").hide();
     $("body").css("overflow", "auto");
+    Waypoint.refreshAll();
   });
 }, 2000);
 
-//the nav bar toggles between transparent and the the main color when depassing the view
-$(function() {
-  var h = jQuery(window).height();
-  $(window).scroll(function() {
-    if ($("#navigation").offset().top <= h / 4) {
-      if ($("#navigation").css("backgroundColor") != "transparent") {
-        $("#navigation")
-          .stop()
-          .animate({ backgroundColor: "transparent" }, 1000);
-      }
-    } else {
-      if ($("#navigation").css("backgroundColor") != "#0d3036") {
-        $("#navigation")
-          .stop()
-          .animate({ backgroundColor: "#0d3036" }, 1000);
-      }
+//the navbar drops after reaching a certain point
+
+//navbar dropdown
+$("#About").waypoint(
+  direction => {
+    if (direction === "down") {
+      $("#navigation").css("display", "block");
+      $("#navigation").removeClass("fadeOutUp");
+      $("#navigation").addClass("fadeInDown");
     }
-  });
+  },
+  { offset: "50%" }
+);
+$("#About").waypoint(
+  direction => {
+    if (direction === "up") {
+      $("#navigation").removeClass("fadeInDown");
+      $("#navigation").addClass("fadeOutUp");
+    }
+  },
+  { offset: "50%" }
+);
+
+//navbar active section
+let navbar = $("#navigation");
+$("#About").waypoint(direction => {
+  if (direction === "down") {
+    navbar.find(".active").removeClass("active");
+    navbar.find(".aboutLink").addClass("active");
+  }
+});
+$("#About").waypoint(direction => {
+  if (direction === "up") {
+    navbar.find(".active").removeClass("active");
+    navbar.find(".homeLink").addClass("active");
+  }
+});
+
+$("#Skills").waypoint(direction => {
+  if (direction === "down") {
+    navbar.find(".active").removeClass("active");
+    navbar.find(".skillsLink").addClass("active");
+  }
+});
+$("#Skills").waypoint(direction => {
+  if (direction === "up") {
+    navbar.find(".active").removeClass("active");
+    navbar.find(".aboutLink").addClass("active");
+  }
+});
+
+$("#Projects").waypoint(direction => {
+  if (direction === "down") {
+    navbar.find(".active").removeClass("active");
+    navbar.find(".projectsLink").addClass("active");
+  }
+});
+$("#Projects").waypoint(direction => {
+  if (direction === "up") {
+    navbar.find(".active").removeClass("active");
+    navbar.find(".skillsLink").addClass("active");
+  }
+});
+
+$("#Contact").waypoint(
+  direction => {
+    if (direction === "down") {
+      navbar.find(".active").removeClass("active");
+      navbar.find(".contactLink").addClass("active");
+    }
+  },
+  { offset: "5%" }
+);
+$("#Contact").waypoint(direction => {
+  if (direction === "up") {
+    navbar.find(".active").removeClass("active");
+    navbar.find(".projectsLink").addClass("active");
+  }
 });
 
 // Animating the Skills table
