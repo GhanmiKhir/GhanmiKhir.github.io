@@ -168,12 +168,12 @@ $("#Contact").waypoint(direction => {
 
 // Animating the Hamburger menu
 let hideSidebar = function() {
-  $("#Hamburger").css({ width: "0", height: "0" });
   $(".slideMenu").removeClass("slideInRight");
   $(".slideMenu").addClass("slideOutRight");
   $(".overlay")
     .stop()
     .fadeOut(700);
+  $("#Hamburger").css({ width: "0", height: "0" });
 };
 let showSidebar = function() {
   $("#Hamburger").css({ width: "100%", height: "100%" });
