@@ -39,6 +39,16 @@ setTimeout(function() {
 $("#About").waypoint(
   direction => {
     if (direction === "down") {
+      if ($(window).width() <= 768) {
+        $(".menu-wrapper").animate(
+          {
+            backgroundColor: "rgba(13, 48, 54, 0.95)",
+            borderColor: "rgba(13, 48, 54, 0.95)"
+          },
+          500
+        );
+        return;
+      }
       $("#navigation").css("display", "block");
       $("#navigation").removeClass("fadeOutUp");
       $("#navigation").addClass("fadeInDown");
@@ -49,6 +59,16 @@ $("#About").waypoint(
 $("#About").waypoint(
   direction => {
     if (direction === "up") {
+      if ($(window).width() <= 768) {
+        $(".menu-wrapper").animate(
+          {
+            backgroundColor: "transparent",
+            borderColor: "#fcfcfc"
+          },
+          500
+        );
+        return;
+      }
       $("#navigation").removeClass("fadeInDown");
       $("#navigation").addClass("fadeOutUp");
     }
@@ -62,12 +82,20 @@ $("#About").waypoint(direction => {
   if (direction === "down") {
     navbar.find(".active").removeClass("active");
     navbar.find(".aboutLink").addClass("active");
+    $(".slBody")
+      .children()
+      .css("backgroundColor", "#FCFCFC");
+    $(".slAbout").css("backgroundColor", "#EAEAEA");
   }
 });
 $("#About").waypoint(direction => {
   if (direction === "up") {
     navbar.find(".active").removeClass("active");
     navbar.find(".homeLink").addClass("active");
+    $(".slBody")
+      .children()
+      .css("backgroundColor", "#FCFCFC");
+    $(".slHome").css("backgroundColor", "#EAEAEA");
   }
 });
 
@@ -75,12 +103,20 @@ $("#Skills").waypoint(direction => {
   if (direction === "down") {
     navbar.find(".active").removeClass("active");
     navbar.find(".skillsLink").addClass("active");
+    $(".slBody")
+      .children()
+      .css("backgroundColor", "#FCFCFC");
+    $(".slSkills").css("backgroundColor", "#EAEAEA");
   }
 });
 $("#Skills").waypoint(direction => {
   if (direction === "up") {
     navbar.find(".active").removeClass("active");
     navbar.find(".aboutLink").addClass("active");
+    $(".slBody")
+      .children()
+      .css("backgroundColor", "#FCFCFC");
+    $(".slAbout").css("backgroundColor", "#EAEAEA");
   }
 });
 
@@ -88,12 +124,20 @@ $("#Projects").waypoint(direction => {
   if (direction === "down") {
     navbar.find(".active").removeClass("active");
     navbar.find(".projectsLink").addClass("active");
+    $(".slBody")
+      .children()
+      .css("backgroundColor", "#FCFCFC");
+    $(".slProjects").css("backgroundColor", "#EAEAEA");
   }
 });
 $("#Projects").waypoint(direction => {
   if (direction === "up") {
     navbar.find(".active").removeClass("active");
     navbar.find(".skillsLink").addClass("active");
+    $(".slBody")
+      .children()
+      .css("backgroundColor", "#FCFCFC");
+    $(".slSkills").css("backgroundColor", "#EAEAEA");
   }
 });
 
@@ -102,6 +146,10 @@ $("#Contact").waypoint(
     if (direction === "down") {
       navbar.find(".active").removeClass("active");
       navbar.find(".contactLink").addClass("active");
+      $(".slBody")
+        .children()
+        .css("backgroundColor", "#FCFCFC");
+      $(".slContact").css("backgroundColor", "#EAEAEA");
     }
   },
   { offset: "5%" }
@@ -110,8 +158,44 @@ $("#Contact").waypoint(direction => {
   if (direction === "up") {
     navbar.find(".active").removeClass("active");
     navbar.find(".projectsLink").addClass("active");
+    $(".slBody")
+      .children()
+      .css("backgroundColor", "#FCFCFC");
+    $(".slProjects").css("backgroundColor", "#EAEAEA");
   }
 });
+// HAMBURGER
+
+// Animating the Hamburger menu
+let hideSidebar = function() {
+  $(".slideMenu").removeClass("slideInRight");
+  $(".slideMenu").addClass("slideOutRight");
+  $(".overlay")
+    .stop()
+    .fadeOut(700);
+};
+let showSidebar = function() {
+  $(".slideMenu").removeClass("slideOutRight");
+  $(".slideMenu").css("display", "block");
+  $(".slideMenu").addClass("slideInRight");
+  $(".overlay")
+    .stop()
+    .fadeIn(700);
+};
+$(".overlay").on("click", function() {
+  hideSidebar();
+});
+//slider in/out when clicking on the humberger button
+$(".menu-wrapper").on("click", function() {
+  $(".hamburger-menu").toggleClass("animate");
+  if ($(".slideMenu").hasClass("slideInRight")) {
+    hideSidebar();
+  } else {
+    showSidebar();
+  }
+});
+
+//changing background based on position
 
 // Animating the Skills table
 $(".thead-light").css("cursor", "pointer");
