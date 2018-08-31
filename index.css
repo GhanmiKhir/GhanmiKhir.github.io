@@ -303,8 +303,6 @@ body {
 #Hamburger {
   z-index: 3;
   position: fixed;
-  height: 100vh;
-  width: 100vw;
   right: 0;
 }
 .slideMenu {

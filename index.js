@@ -168,6 +168,7 @@ $("#Contact").waypoint(direction => {
 
 // Animating the Hamburger menu
 let hideSidebar = function() {
+  $("#Hamburger").css({ width: "0", height: "0" });
   $(".slideMenu").removeClass("slideInRight");
   $(".slideMenu").addClass("slideOutRight");
   $(".overlay")
@@ -175,6 +176,7 @@ let hideSidebar = function() {
     .fadeOut(700);
 };
 let showSidebar = function() {
+  $("#Hamburger").css({ width: "100%", height: "100%" });
   $(".slideMenu").removeClass("slideOutRight");
   $(".slideMenu").css("display", "block");
   $(".slideMenu").addClass("slideInRight");
