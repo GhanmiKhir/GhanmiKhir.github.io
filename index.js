@@ -184,6 +184,7 @@ let showSidebar = function() {
 };
 $(".overlay").on("click", function() {
   hideSidebar();
+  $(".hamburger-menu").toggleClass("animate");
 });
 //slider in/out when clicking on the humberger button
 $(".menu-wrapper").on("click", function() {
