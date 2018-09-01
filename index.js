@@ -34,10 +34,11 @@ setTimeout(function() {
 }, 2000);
 
 // parallax effect
-
-$(window).scroll(function() {
-  parallax();
-});
+if ($(window).width() > 768) {
+  $(window).scroll(function() {
+    parallax();
+  });
+}
 
 function parallax() {
   let wScroll = $(window).scrollTop() - $(".parallax--bg").position().top;
@@ -46,6 +47,7 @@ function parallax() {
     "center " + wScroll * 0.4 + "px"
   );
 }
+
 //the navbar drops after reaching a certain point
 
 //navbar dropdown
