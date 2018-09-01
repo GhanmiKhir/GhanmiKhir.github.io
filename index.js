@@ -33,6 +33,19 @@ setTimeout(function() {
   });
 }, 2000);
 
+// parallax effect
+
+$(window).scroll(function() {
+  parallax();
+});
+
+function parallax() {
+  let wScroll = $(window).scrollTop() - $(".parallax--bg").position().top;
+  $(".parallax--bg").css(
+    "backgroundPosition",
+    "center " + wScroll * 0.4 + "px"
+  );
+}
 //the navbar drops after reaching a certain point
 
 //navbar dropdown
@@ -173,7 +186,9 @@ let hideSidebar = function() {
   $(".overlay")
     .stop()
     .fadeOut(700);
-  $("#Hamburger").css({ width: "0", height: "0" });
+  setTimeout(function() {
+    $("#Hamburger").css({ width: "0", height: "0" });
+  }, 700);
 };
 let showSidebar = function() {
   $("#Hamburger").css({ width: "100%", height: "100%" });

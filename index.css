@@ -431,7 +431,8 @@ body {
   text-align: center;
   background: url("./images/memphis-colorful.jpg");
   background-repeat: repeat;
-  background-attachment: fixed;
+  background-position: center;
+  /* background-attachment: fixed; */
 }
 
 .about h1 {
